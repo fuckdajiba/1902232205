@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表头</title>
+</head>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<style>
+*{margin:0;padding:0;}
+	table{border:1px solid green;}
+	tr{border:1px solid orange;}/*实线*/
+	td,th{border:1px dashed grey;width:200px;}/*虚线*/
+	h1{
+		/*width:100%;*/
+		text-overflow: ellipsis;	/*文本超出省略*/ 
+		overflow: hidden;	/*超出隐藏*/
+		white-space: nowrap; /*单行不换行*/
+	}
+	h3{
+		width:100%;
+		height:103px;
+		  -webkit-line-clamp: 4;
+		  -webkit-box-orient: vertical;
+		  overflow : hidden;
+		  text-overflow: ellipsis;
+		  display: -webkit-box;
+	}
+	a{color:black;text-decoration: none;}/*下划线*/
+
+	.on{color:green;}
+	.box{
+		border:1px solid green;
+		width:230px;
+		margin:0 auto 20px auto;
+	}
+	#id1{
+		color:green;
+	}
+
+
+</style>
+<body>
+	<div class="box">
+		<div id="id1">id1</div>
+
+		<div class="rongqi">容器块状</div>
+		<h1>阿萨德打发啊发打发打发打发打</h1>
+		<h3>阿萨德打发啊发打发打发打发打阿萨德打发啊发打发打发打发打阿萨德打发啊发打发打发打发打阿萨德打发啊发打发打发打发打</h3>
+		<p>文本块状</p>
+
+		<div>容器块状</div>
+		<h1>大一号字体块状</h1>
+		<p>文本块状</p>
+
+		<div>容器块状</div>
+		<h1>大一号字体块状</h1>
+		<p>文本块状</p>
+
+		<div>容器块状</div>
+		<h1>大一号字体块状</h1>
+		<p>文本块状</p>
+
+		<div>容器块状</div>
+		<h1>大一号字体块状</h1>
+		<p>文本块状</p>
+
+		<div>容器块状</div>
+		<h1>大一号字体块状</h1>
+		<p>文本块状</p>
+		<div>容器块状</div>
+		<h1>大一号字体块状</h1>
+		<p>文本块状</p>
+		<div>容器块状</div>
+		<h1>大一号字体块状</h1>
+		<p>文本块状</p>
+		<div>容器块状</div>
+		<h1>大一号字体块状</h1>
+		<p>文本块状</p>
+		<div>容器块状</div>
+		<h1>大一号字体块状</h1>
+		<p>文本块状</p>
+	</div>
+	<div class="box">
+		<button><a href="#id1">跳id1</a></button>
+	</div>
+	<div class="box">
+		<table>
+			<tr>
+				<th>id</th>
+				<th>名称</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>大枣</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<style>
+		.block{
+			width:50px;
+			height:50px;
+			border:1px solid grey;
+		}
+		.block:nth-child(1){
+			margin-right:40px;
+		}
+		.box2{
+			height: 200px;
+			/*max-height:100px;*/
+			display: flex; /*弹性布局*/
+			flex-direction:row;   /*column排*/
+			justify-content: center;  /*flex横向布局*/
+			align-items:center;  /*flex横向布局*/
+
+		}
+
+	</style>
+	<div class="box box2">
+		<div class="block"></div>
+		<div class="block"></div>
+	</div>
+
+<script>
+	console.log($('#id1').html());
+	$('.rongqi').click(function(){
+		$('.rongqi').toggleClass('on');
+		var a=$('.rongqi').html();
+		if(a=='容器块状')
+			$('.rongqi').html('容器大大块状');
+		else
+			$('.rongqi').html('容器块状');
+
+	})
+</script>	
+</body>
+
+
+
+</html>
